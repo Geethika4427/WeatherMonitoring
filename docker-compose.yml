@@ -1,0 +1,26 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/weatherdb
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  frontend:
+    build:
+      context: ./Frontend  
+      dockerfile: Dockerfile       
+    ports:
+      - "3002:80"                  
+    depends_on:
+      - backend                   
