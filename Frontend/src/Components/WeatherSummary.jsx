@@ -22,8 +22,9 @@ const WeatherSummary = () => {
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/weather-summaries');
-        console.log('API Response:', response.data);
+       // const response = await axios.get('http://localhost:5000/api/weather-summaries');
+       const response = await axios.get('http://localhost:5002/api/weather-summaries');
+       console.log('API Response:', response.data);
         setWeatherData(response.data);
       } catch (error) {
         console.error('Error fetching weather summaries:', error);

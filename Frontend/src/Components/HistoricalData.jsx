@@ -14,7 +14,8 @@ const HistoricalWeather = () => {
 
   const fetchHistoricalData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/historical-weather');
+      //const response = await axios.get('http://localhost:5000/api/historical-weather');
+      const response = await axios.get('http://localhost:5002/api/historical-weather');
       console.log(response.data); // Log the response to see its structure
       if (Array.isArray(response.data)) {
         setHistoricalData(response.data);

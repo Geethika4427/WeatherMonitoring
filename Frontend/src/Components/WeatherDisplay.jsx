@@ -10,7 +10,8 @@ const WeatherDisplay = () => {
   // Fetch weather data
   const fetchWeatherData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/weather');
+     // const response = await axios.get('http://localhost:5000/weather');
+     const response = await axios.get('http://localhost:5002/weather');
       setWeatherData(response.data); // Set the weather data
       console.log('Fetched Weather Data:', response.data); // Log the fetched data
     } catch (error) {
