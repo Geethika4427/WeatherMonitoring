@@ -23,6 +23,7 @@ The Real-Time Weather Monitoring System is designed to monitor weather condition
 - **Database**: MongoDB
 - **API**: OpenWeatherMap API
 - **IDEs**: Visual Studio Code for both frontend and backend
+- **Docker URLs**: http://localhost:3003 for frontend, http://localhost:5002 for backend
 
 ## Installation
 1. Clone the repository:
@@ -81,16 +82,17 @@ The Real-Time Weather Monitoring System is designed to monitor weather condition
   API Endpoints:
   -------------------
   Several API endpoints are defined to interact with the weather data:
-  /api/weather-trends: Fetches historical trends.
-  /weather: Gets current weather data for all cities.
-  /saveWeather: Saves weather data.
-  /api/weather-summaries: Retrieves the latest summaries for all cities.
-  /api/historical-weather: Fetches historical weather data.
-  /api/alerts: Gets alerts from the database.
+  http://localhost:5002/api/weather-trends: Fetches historical trends.
+  http://localhost:5002/weather: Gets current weather data for all cities.
+  http://localhost:5002/saveWeather: Saves weather data.
+  http://localhost:5002/api/weather-summaries : Retrieves the latest summaries for all cities.
+  http://localhost:5002/api/historical-weather: Fetches historical weather data.
+  http://localhost:5002/api/alerts: Gets alerts from the database.
 
   Alerts:
   -------
-  The code has built-in functionality to trigger alerts based on weather conditions, such as high or low temperatures and rainy or snowy weather.
+  The code has built-in functionality to trigger alerts based on weather conditions, such as high or low temperatures and 
+  rainy or snowy weather.
   
 4.Navigate to the frontend directory and install dependencies:
  ->create Frontend directory >> npm create vite@latest >> projectName >> cd ProjectName >> npm install axios react-router-dom@6 >> npm run dev
