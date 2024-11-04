@@ -22,6 +22,7 @@ The Real-Time Weather Monitoring System is designed to monitor weather condition
 - **Frontend**: React
 - **Database**: MongoDB
 - **API**: OpenWeatherMap API
+- **IDEs**: Visual Studio Code for both frontend and backend
 
 ## Installation
 1. Clone the repository:
